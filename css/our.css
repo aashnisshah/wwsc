@@ -1,0 +1,48 @@
+.ourcenter {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  padding-top:60px;
+  max-width: 90%;
+}
+
+.middle-width{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    max-width: 70%;
+}
+
+.loginform {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    max-width: 600px;
+}
+
+.linkdisplay {
+    max-height:100px;
+    max-width:100px;
+}
+
+.defaultHide {
+    display:none;
+}
+
+#addLinkButton {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.editformdisplay {
+    max-height:100px;
+    max-width:100px;
+}
+
+.margin-right{
+    margin-right:8px;
+}
+
+.margin-bottom{
+    margin-bottom:8px;
+}
