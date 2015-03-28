@@ -8,8 +8,6 @@
 	if(isset($error)) {echo $error;}
 ?>
 
-<!-- <button id="addLinkButton" class="btn btn-info btn-lg" type="button">Add A New Category</button> -->
-
 <div id="addNewLink" class="newlink">
     <?php
         $attributes = array('class' => 'form-horizontal');

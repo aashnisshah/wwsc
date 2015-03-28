@@ -3,7 +3,7 @@
     <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-01">
         </button>
-        <a class="navbar-brand" href="<?php echo site_url(); ?>home/index">The Missing Link</a>
+        <a class="navbar-brand" href="<?php echo site_url(); ?>home/index">WWSC</a>
     </div>
     <div class="collapse navbar-collapse" id="navbar-collapse-01">
         <?php

@@ -13,19 +13,19 @@
 <div id="addNewLink" class="newlink">
     <?php
         $attributes = array('class' => 'form-horizontal');
-        echo form_open('images/newImage', $attributes);
+        echo form_open('submissions/add_new_submission', $attributes);
     ?>
         <div class="form-group">
             <label for="url" class="control-label">Recepients Name: </label>
-            <input type="text" class="form-control" name="name" placeholder="e.g. John Smith">
+            <input type="text" class="form-control" name="receiver" placeholder="e.g. John Smith">
         </div>
         <div class="form-group">
             <label for="name" class="control-label">Item Name: </label>
-            <input type="text" class="form-control" name="description" placeholder="e.g. Coke, Pineapple, Shoe">
+            <input type="text" class="form-control" name="words" placeholder="e.g. Coke, Pineapple, Shoe">
         </div>
         <div class="form-group hidden">
-            <label for="imageId" class="control-label">Item Name: </label>
-            <input type="text" class="form-control" name="description" value="<?php echo $upload_data['file_name'] ?>">
+            <label for="imageId" class="control-label">Item ID: </label>
+            <input type="text" class="form-control" name="imageId" value="<?php echo $upload_data['file_name'] ?>">
         </div>
         <div class="form-group">
             <div class="">
