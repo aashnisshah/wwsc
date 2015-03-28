@@ -1,2 +1,1 @@
-# wwsc
-Words With Snap Chat
+WWSC
