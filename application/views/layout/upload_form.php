@@ -1,5 +1,9 @@
 <br>
 
+<h1>Select Image to Upload</h1>
+
+<br>
+
 <?php
 	if(isset($error)) {echo $error;}
 ?>
