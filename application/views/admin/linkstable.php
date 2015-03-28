@@ -1,7 +1,8 @@
 <?php
 
     if(count($allLinks) < 1) {
-        echo "<p>There are currently no links to list.";
+        echo '<p>There are currently no images to list.</p>';
+        echo '<p>Would you like to <a href="' . site_url('upload') . '">send one</a>?';
     } else {
 
 ?>

@@ -8,7 +8,7 @@
 
 <?php
     if(count($categories) < 1 ) {
-        echo "There are currently no categories to display. Create a category by selecting the button above.";
+        echo "There are currently no images to display. Create an image by selecting the button above.";
     } else {
 ?>
 
