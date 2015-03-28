@@ -44,7 +44,7 @@ class Submissions extends CI_Controller {
             $this->submissions_model->add_new_submission($data);
             $data['status'] = "success";
 
-            redirect('links/index/all', $data);
+            redirect('home/index', $data);
     }
 
     /**

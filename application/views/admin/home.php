@@ -6,7 +6,6 @@
 
 	if(isset($submitted) && $submitted) {
 		echo "<br><br><br>#wahh";
-		var_dump(get_defined_vars());
 	}
 
 ?>
