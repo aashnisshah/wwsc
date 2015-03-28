@@ -4,4 +4,8 @@
 
     // things can eventually go here?
 
+	if(isset($submitted) && $submitted) {
+		echo "<br><br><br>#wahh";
+	}
+
 ?>
