@@ -62,7 +62,17 @@ class Upload extends CI_Controller {
 
 	/** this function checks to see if the image is child-friendly **/
 	function childSafe() {
-		return false;
+
+		$response = $this->unirest->get("https://sphirelabs-advanced-porn-nudity-and-adult-content-detection.p.mashape.com/v1/get/index.php?url=http%3A%2F%2Fthumbs1.ebaystatic.com%2Fd%2Fl225%2Fpict%2F251356261220_1.jpg",
+		  array(
+		    "X-Mashape-Key" => "6SthFMuqzxmshK1E5PaSCNyokBgxp16e0zbjsn522jIHGSDuDa",
+		    "Content-Type" => "application/x-www-form-urlencoded",
+		    "Accept" => "application/json"
+		  )
+		);
+
+		return !$response->body->{'Is Porn'};
+
 	}
 }
 ?>
