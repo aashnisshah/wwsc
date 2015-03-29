@@ -6,13 +6,14 @@ class Home extends CI_Controller {
         parent::__construct();
         $this->load->model('admin_model','',TRUE);
         $this->load->model('link_model', '', TRUE);
+        $this->load->model('submissions_model', '', TRUE);
         $this->load->model('categories_model', '', TRUE);
     }
 
     function index() {
         if($this->session->userdata('logged_in')) {
             $session_data = $this->session->userdata('logged_in');
-            $data['allLinks'] = $this->link_model->get_status_filtered_links("Pending");
+            $data['allLinks'] = $this->submissions_model->get_all_submissions_received_for_id('john');
             $data['categories'] = $this->getCategories();
             $data['username'] = $session_data['username'];
             $data['id'] = $session_data['id'];

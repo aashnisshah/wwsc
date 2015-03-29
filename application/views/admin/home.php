@@ -1,11 +1,4 @@
-<h2>Welcome <?php echo $username; ?></h2>
+<h2>Welcome</h2>
 
-<?php
-
-    // things can eventually go here?
-
-	if(isset($submitted) && $submitted) {
-		echo "<br><br><br>#wahh";
-	}
-
-?>
+<?php 	echo '<p>Below are all image challenges that are waiting your attention.</p>';
+		echo 'Would you like to <a href="' . site_url('upload') . '">send one</a>?</p>'; ?>

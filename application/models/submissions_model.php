@@ -22,8 +22,8 @@ class Submissions_model extends CI_Model {
     /**
      * Get all information about all submissions sent to $receiverId
      */
-    function get_all_submissions_received_for_id($receiverId) {
-        $query = $this->db->get_where('submissions', array('receiver' => $receiverId));
+    function get_all_submissions_received_for_id($receiverName) {
+        $query = $this->db->get_where('submissions', array('receiver' => $receiverName));
 		$data = $query->result_array();
         return $data;
     }

@@ -35,16 +35,16 @@ class Submissions extends CI_Controller {
     function add_new_submission() {
         $this->load->library('form_validation');
 
-            $session_data = $this->session->userdata('logged_in');
-            $data['imageId'] = $this->input->post('imageId');
-            $data['words'] = $this->input->post('words');
-            $data['sender'] = $this->session->userdata('username');
-            $data['receiver'] = $this->input->post('receiver');
-            $data['status'] = 'new';
-            $this->submissions_model->add_new_submission($data);
-            $data['status'] = "success";
+        $session_data = $this->session->userdata('logged_in');
+        $data['imageId'] = $this->input->post('imageId');
+        $data['words'] = $this->input->post('words');
+        $data['sender'] = $this->session->userdata('username');
+        $data['receiver'] = $this->input->post('receiver');
+        $data['status'] = 'new';
+        $this->submissions_model->add_new_submission($data);
+        $data['status'] = "success";
 
-            redirect('home/index', $data);
+        redirect('home/index', $data);
     }
 
     /**
