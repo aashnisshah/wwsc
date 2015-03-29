@@ -1,5 +1,9 @@
 <h2>Welcome <?php echo $username; ?></h2>
 
 
-<?php 	echo '<p>Below are all image challenges that are waiting your attention.</p>';
-		echo 'Would you like to <a href="' . site_url('upload') . '">send one</a>?</p>'; ?>
+<?php
+	
+	echo 'Would you like to <a href="' . site_url('upload') . '">send a picture</a>?</p>';
+	echo '<p>Below are all new images waiting for your attention.</p>';
+
+?>

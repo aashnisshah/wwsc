@@ -6,30 +6,16 @@
 
 ?>
 
-<table class="table table-condensed">
-
-    <tr>
-        <td>Image ID</td>
-        <td>Image ID</td>
-        <!-- <td>words</td> -->
-        <td>From</td>
-        <!-- <td>receiver</td> -->
-        <td>status</td>
-    </tr>
-
-    <?php
+     <?php
         foreach($allLinks as $link) {
-            echo '<tr>';
-                echo '<td>' . $link['imageId'] . '</td>';
-                echo '<td><img src="../uploads/' . $link['imageId'] . '"></td>';
-                // echo '<td>' . $link['words'] . '</td>';
-                echo '<td>' . $link['sender'] . '</td>';
-                // echo '<td>' . $link['receiver'] . '</td>';
-                echo '<td>' . $link['status'] . '</td>';
-            echo '</tr>';
+                echo '<div class="col-sm-3">'
+                        . '<h4>' . $link['sender'] . '</h4>'
+                        . '<img class="img-responsive" src="../uploads/'
+                        . $link['imageId'] . '">'
+                        .'</div>';
         }
     ?>
-</table>
+
 
 <?php
     }

@@ -48,9 +48,9 @@ class Upload extends CI_Controller {
 		else
 		{
 			$uploadData = $this->upload->data();
-			$data['full_path'] = $uploadData['full_path'];
+			$data['file_name'] = $uploadData['file_name'];
 			var_dump($data);
-			$data['childSafe'] = $this->childSafe($data['full_path']);
+			$data['childSafe'] = $this->childSafe($data['file_name']);
 			$session_data = $this->session->userdata('logged_in');
 			$data['upload_data'] = $this->upload->data();
 	        $data['username'] = $session_data['username'];
@@ -75,8 +75,12 @@ class Upload extends CI_Controller {
 		    "Accept" => "application/json"
 		  )
 		);
-		
-		return strcmp($response->body->{'Is Porn'}, "True");
+
+		if($response && $response->body && isset($response->body->{'Is Porn'})) {
+			return strcmp($response->body->{'Is Porn'}, "True");
+		} else {
+			return false;
+		}
 
 	}
 }
