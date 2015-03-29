@@ -1,7 +1,5 @@
 <?php
 
-    // var_dump(get_defined_vars());
-
     if(count($allLinks) < 1) {
         echo '<p>There are currently no images to list.</p>';
     } else {

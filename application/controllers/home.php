@@ -13,10 +13,10 @@ class Home extends CI_Controller {
     function index() {
         if($this->session->userdata('logged_in')) {
             $session_data = $this->session->userdata('logged_in');
-            $data['allLinks'] = $this->submissions_model->get_all_submissions_received_for_id('john');
             $data['categories'] = $this->getCategories();
-            $data['username'] = $session_data['username'];
+            $data['username'] = $this->session->userdata('username');
             $data['id'] = $session_data['id'];
+            $data['allLinks'] = $this->submissions_model->get_all_submissions_received_for_id($data['username']);
             $this->load->view('layout/header', $data);
             $this->load->view('layout/navbar',$data);
             $this->load->view('admin/home',$data);
