@@ -25,9 +25,9 @@ class Upload extends CI_Controller {
 		$date = new DateTime();
 		$config['upload_path'] = $_SERVER['DOCUMENT_ROOT'] . '/as/uploads';
 		$config['allowed_types'] = 'gif|jpg|png';
-		$config['max_size']	= '10000';
-		$config['max_width']  = '1024';
-		$config['max_height']  = '768';
+		$config['max_size']	= '99999';
+		$config['max_width']  = '9999';
+		$config['max_height']  = '9999';
 		$config['file_name'] = $date->getTimestamp();
 
 		$this->load->library('upload', $config);

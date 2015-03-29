@@ -12,11 +12,11 @@
         ?>
         <ul class="nav navbar-nav">
             <li><a href="<?php echo site_url(); ?>home/index">Dashboard</a></li>
-            <li><a href="<?php echo site_url(); ?>links/index/all">Links</a></li>
+<!--             <li><a href="<?php echo site_url(); ?>links/index/all">Links</a></li>
             <li><a href="<?php echo site_url(); ?>categories/index">Categories</a></li>
             <li><a href="<?php echo site_url(); ?>admin/info">Account</a></li>
             <li><a href="<?php echo site_url(); ?>display/index">Display Control</a></li>
-        </ul>
+ -->        </ul>
         <?php
             }
         ?>
