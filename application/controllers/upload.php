@@ -47,7 +47,10 @@ class Upload extends CI_Controller {
 		}
 		else
 		{
-			$data['childSafe'] = $this->childSafe();
+			$uploadData = $this->upload->data();
+			$data['full_path'] = $uploadData['full_path'];
+			var_dump($data);
+			$data['childSafe'] = $this->childSafe($data['full_path']);
 			$session_data = $this->session->userdata('logged_in');
 			$data['upload_data'] = $this->upload->data();
 	        $data['username'] = $session_data['username'];
@@ -61,9 +64,11 @@ class Upload extends CI_Controller {
 	}
 
 	/** this function checks to see if the image is child-friendly **/
-	function childSafe() {
-		$url = "https://sphirelabs-advanced-porn-nudity-and-adult-content-detection.p.mashape.com/v1/get/index.php?url=http://i.imgur.com/4hGni1I.jpg";
-		$response = $this->unirest->get($url,
+	function childSafe($imgUrl) {
+		$mashapeEndpoint = "https://sphirelabs-advanced-porn-nudity-and-adult-content-detection.p.mashape.com/v1/get/index.php?url=";
+		// $imgUrl = "http://i.imgur.com/4hGni1I.jpg";
+		error_log($imgUrl);
+		$response = $this->unirest->get($mashapeEndpoint . $imgUrl,
 		  array(
 		    "X-Mashape-Key" => "6SthFMuqzxmshK1E5PaSCNyokBgxp16e0zbjsn522jIHGSDuDa",
 		    "Content-Type" => "application/x-www-form-urlencoded",
