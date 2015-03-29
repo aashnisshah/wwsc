@@ -79,7 +79,7 @@ class Upload extends CI_Controller {
 		if($response && $response->body && isset($response->body->{'Is Porn'})) {
 			return strcmp($response->body->{'Is Porn'}, "True");
 		} else {
-			return false;
+			return true;
 		}
 
 	}
