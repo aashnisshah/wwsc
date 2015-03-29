@@ -6,6 +6,7 @@ class Upload extends CI_Controller {
 	{
 		parent::__construct();
 		$this->load->helper(array('form', 'url'));
+		$this->load->library('unirest');
 	}
 
 	function index()
@@ -46,6 +47,7 @@ class Upload extends CI_Controller {
 		}
 		else
 		{
+			$data['childSafe'] = $this->childSafe();
 			$session_data = $this->session->userdata('logged_in');
 			$data['upload_data'] = $this->upload->data();
 	        $data['username'] = $session_data['username'];
@@ -56,6 +58,11 @@ class Upload extends CI_Controller {
 	        $this->load->view('layout/footer', $data);
 
 		}
+	}
+
+	/** this function checks to see if the image is child-friendly **/
+	function childSafe() {
+		return false;
 	}
 }
 ?>

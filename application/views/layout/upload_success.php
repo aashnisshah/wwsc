@@ -1,5 +1,10 @@
 <br>
 
+<?php
+
+    if($childSafe) {
+?>
+
 <h3>Your file was successfully uploaded!</h3>
 
 <p>Select which friends you want to send the image to, as well as 
@@ -35,9 +40,20 @@
     </form>
 </div>
 
+<p><?php echo anchor('upload', 'Change Image'); ?></p>
+
+<?php
+    } else {
+?>
+
+<h3>Your file was not uploaded!</h3>
+
+<p>Your file was not considered safe. Your account has been temporarily suspended.</p>
+<p>Your account shall be reviewed, afterwhich we shall send you an email regarding the next steps.</p>
+
+<?php
+    }
+?>
+
 <br>
 
-
-
-
-<p><?php echo anchor('upload', 'Change Image'); ?></p>
